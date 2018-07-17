@@ -16,12 +16,12 @@ build:
 push-release:
   steps:
     - internal/docker-push:
-        username: $username
-        password: $password
-        repository: $repository
-        registry: $registry
-        tag: $tag
+        username: $doc_username
+        password: $doc_password
+        repository: $doc_repository
+        registry: $doc_registry
+        tag: $doc_tag
         working-dir: /pipeline/source
         ports: $PORT
-        env: PORT=$PORT
+        env: PORT=$doc_PORT
         cmd: sh target/bin/start
