@@ -22,6 +22,6 @@ push-release:
         registry: $doc_registry
         tag: $doc_tag
         working-dir: /pipeline/source
-        ports: $PORT
+        ports: $doc_port
         env: PORT=$doc_PORT
         cmd: sh target/bin/start
